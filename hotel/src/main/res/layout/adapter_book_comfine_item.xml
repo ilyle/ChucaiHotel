@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_590"
+    android:layout_height="@dimen/dp_590"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.xtf.xtflib.widget.ImageTextView.DrawableCenterTextView
+
+        android:layout_width="wrap_content"
+        app:leftDrawableWidth="@dimen/dp_21"
+        app:leftDrawableHeight="@dimen/dp_25"
+        android:textSize="@dimen/dp_21"
+        android:textColor="#333333"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:id="@+id/order_no_tv"
+        android:layout_marginTop="@dimen/dp_21"
+        android:layout_marginRight="@dimen/dp_27"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_marginTop="@dimen/dp_73"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:textSize="@dimen/dp_20"
+            android:textColor="#131415"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:textSize="@dimen/dp_20"
+            android:textColor="#131415"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/gui_ge"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/dp_111"
+        android:textSize="@dimen/dp_20"
+        android:textColor="#131415"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_marginTop="@dimen/dp_148"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/in_time"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:textSize="@dimen/dp_20"
+            android:textColor="#131415"
+            android:layout_height="wrap_content"/>
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:orientation="horizontal"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:id="@+id/out_time"
+               android:layout_width="wrap_content"
+               android:gravity="left"
+               android:textSize="@dimen/dp_20"
+               android:textColor="#131415"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:id="@+id/day"
+               android:layout_width="wrap_content"
+               android:padding="@dimen/dp_8"
+               android:textSize="@dimen/dp_15"
+               android:layout_marginLeft="@dimen/dp_15"
+               android:textColor="#FFFFFF"
+               android:layout_height="wrap_content"/>
+       </LinearLayout>
+    </LinearLayout>
+
+    <com.xtf.xtflib.widget.NiceImageView.NiceImageView
+        android:id="@+id/image"
+        app:is_circle="false"
+        app:corner_radius="@dimen/dp_3"
+        android:layout_width="@dimen/dp_512"
+        android:layout_marginTop="@dimen/dp_188"
+        android:layout_centerHorizontal="true"
+        android:layout_height="@dimen/dp_149"/>
+
+
+    <TextView
+        android:id="@+id/tips_tv"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_marginTop="@dimen/dp_350"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_marginBottom="@dimen/dp_46"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_width="wrap_content"
+        android:textColor="#333333"
+        android:textSize="@dimen/dp_44"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/ru_zhu_btn"
+        android:textSize="@dimen/dp_30"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_width="@dimen/dp_174"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/dp_28"
+        android:gravity="center"
+        android:text="直接入住"
+        android:layout_marginRight="@dimen/dp_27"
+
+        android:layout_height="@dimen/dp_58"/>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+include ':hotel'
+//include ':app_f1'
+include ':xtflib'
+include ':library_adapter'
+include ':F1_api',
+':faceplatform-release'
+include ':faceplatform-ui'
+//include ':app1'
+
+rootProject.name = "ChucaiHotel"

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ACT-F1-1000 TEST</string>
+    <string name="connected">已连接</string>
+    <string name="connect">连接</string>
+    <string name="disconnect">断开连接</string>
+    <string name="reset">复位发卡机</string>
+    <string name="getcardtype">发卡到出卡口</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="title_activity_connect">连接</string>
+    <string name="base">基本命令</string>
+    <string name="mf0">MF0 UL</string>
+    <string name="mf1_s70">MF1 S70</string>
+    <string name="mf1_s50">MF1 S50</string>
+    <string name="cpu">RF CPU</string>
+    <string name="select">寻卡</string>
+    <string name="readuid">读 UID</string>
+    <string name="auth">认证扇区</string>
+    <string name="update">更新 Key A</string>
+    <string name="readrawdata">读数据</string>
+    <string name="writerawdata">写数据</string>
+    <string name="increment">增值</string>
+    <string name="decrement">减值</string>
+    <string name="readvalue">读数据块的值</string>
+    <string name="setvalue">设置数据块的值</string>
+    <string name="select_type_a">寻 A 卡</string>
+    <string name="select_type_b">寻 B 卡</string>
+    <string name="deselect">取消选定</string>
+    <string name="read_type_a_uid">读 A 卡序列号</string>
+    <string name="transmit">发送</string>
+</resources>

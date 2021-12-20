@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="@dimen/dp_597"
+   android:orientation="vertical"
+    android:layout_height="@dimen/dp_862">
+
+    <com.chucai.hotel.ac.fragment.SelectRoomFragment
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_739"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/dp_94">
+        <RelativeLayout
+            android:layout_width="@dimen/dp_393"
+            android:background="@drawable/select_room_bg3"
+            android:layout_height="match_parent">
+
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:orientation="horizontal"
+              android:layout_marginTop="@dimen/dp_15"
+              android:layout_marginLeft="@dimen/dp_22"
+              android:gravity="center_vertical"
+              android:layout_height="wrap_content">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:textSize="@dimen/dp_14"
+                  android:textColor="#131415"
+                  android:text="房间号："
+                  android:layout_height="wrap_content"/>
+              <TextView
+                  android:id="@+id/room_num"
+                  android:layout_width="wrap_content"
+                  android:textSize="@dimen/dp_36"
+                  android:textColor="#131415"
+                  android:text=""
+                  android:layout_height="wrap_content"/>
+              <TextView
+                  android:id="@+id/room_state"
+                  android:layout_width="wrap_content"
+                  android:textSize="@dimen/dp_14"
+                  android:textColor="#131415"
+                  android:layout_height="wrap_content"/>
+
+
+          </LinearLayout>
+
+        <TextView
+            android:id="@+id/select_message"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_22"
+            android:textSize="@dimen/dp_14"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:textColor="#131415"
+            android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:id="@+id/price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="#EF7561"
+                android:textSize="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_21" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/finish_btn"
+            android:layout_width="wrap_content"
+            android:background="@drawable/select_room_bg2"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/dp_24"
+                android:text="完成"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

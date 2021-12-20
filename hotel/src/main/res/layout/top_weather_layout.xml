@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_195"
+    android:background="@drawable/toubuditu"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/tianQi_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_marginTop="@dimen/dp_25"
+        android:src="@drawable/tianqi_icon"
+        android:layout_width="@dimen/dp_52"
+        android:layout_height="@dimen/dp_52"/>
+
+    <TextView
+        android:id="@+id/tian_qi_name"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toRightOf="@id/tianQi_image"
+        android:layout_marginLeft="@dimen/dp_18"
+        android:layout_marginTop="@dimen/dp_36"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/dp_42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:orientation="horizontal"
+       app:layout_constraintTop_toTopOf="parent"
+       android:layout_marginTop="@dimen/dp_42"
+       android:gravity="center_vertical"
+       app:layout_constraintRight_toRightOf="parent"
+       android:layout_marginRight="@dimen/dp_28"
+       android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:orientation="vertical"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:id="@+id/week_tv"
+               android:layout_width="wrap_content"
+               android:textSize="@dimen/sp_24"
+               android:textColor="@android:color/white"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:id="@+id/date_tv"
+               android:layout_width="wrap_content"
+               android:textSize="@dimen/sp_16"
+               android:layout_marginTop="@dimen/dp_4"
+               android:textColor="@android:color/white"
+               android:layout_height="wrap_content"/>
+
+       </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dp_4"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/fenge"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_17"
+            android:layout_height="@dimen/dp_34"/>
+
+
+
+       <TextView
+           android:id="@+id/time_tv"
+           android:layout_width="wrap_content"
+
+           android:textSize="@dimen/dp_46"
+           android:textStyle="bold"
+
+           android:textColor="@color/white"
+           android:layout_height="wrap_content"/>
+
+
+   </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="@dimen/dp_51"
+        android:text="福家智慧酒店自助入住系统"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+       <LinearLayout
+           android:id="@+id/ruzhu_layout"
+           android:layout_width="wrap_content"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintLeft_toLeftOf="parent"
+           android:orientation="horizontal"
+           android:visibility="gone"
+           app:layout_constraintRight_toRightOf="parent"
+           android:layout_marginBottom="@dimen/dp_10"
+           android:layout_height="wrap_content">
+
+
+
+           <TextView
+               android:id="@+id/setp_1_tv"
+               android:textColor="@android:color/white"
+               android:textSize="@dimen/dp_17"
+               android:text="①订单查询"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/d1_iv"
+                android:layout_width="@dimen/dp_19"
+                android:src="@drawable/liucheng_icon_pre"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_17"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_height="@dimen/dp_9"/>
+
+
+
+           <TextView
+               android:id="@+id/setp_2_tv"
+               android:textColor="@android:color/white"
+               android:textSize="@dimen/dp_17"
+               android:text="②选择房型"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+           <ImageView
+               android:id="@+id/d2_iv"
+               android:layout_width="@dimen/dp_19"
+               android:src="@drawable/liucheng_icon_pre"
+               android:layout_gravity="center_vertical"
+               android:layout_marginLeft="@dimen/dp_17"
+               android:layout_marginRight="@dimen/dp_12"
+               android:layout_height="@dimen/dp_9"/>
+
+           <TextView
+               android:id="@+id/setp_3_tv"
+               android:textColor="@android:color/white"
+               android:textSize="@dimen/dp_17"
+               android:text="③登记入住"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+           <ImageView
+               android:id="@+id/d3_iv"
+               android:layout_width="@dimen/dp_19"
+               android:src="@drawable/liucheng_icon_pre"
+               android:layout_gravity="center_vertical"
+               android:layout_marginLeft="@dimen/dp_17"
+               android:layout_marginRight="@dimen/dp_12"
+               android:layout_height="@dimen/dp_9"/>
+
+           <TextView
+               android:id="@+id/setp_4_tv"
+               android:textColor="@android:color/white"
+               android:textSize="@dimen/dp_17"
+               android:text="④订单支付"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+           <ImageView
+               android:id="@+id/d4_iv"
+               android:layout_width="@dimen/dp_19"
+               android:src="@drawable/liucheng_icon_pre"
+               android:layout_gravity="center_vertical"
+               android:layout_marginLeft="@dimen/dp_17"
+               android:layout_marginRight="@dimen/dp_12"
+               android:layout_height="@dimen/dp_9"/>
+           <TextView
+               android:id="@+id/setp_5_tv"
+               android:textColor="@android:color/white"
+               android:textSize="@dimen/dp_17"
+               android:text="⑤入住完成"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+       </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/xu_zhu_layout"
+        android:layout_width="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:id="@+id/d_setp_1_tv"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/dp_17"
+            android:text="①订单查询"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/dx_iv"
+            android:layout_width="@dimen/dp_19"
+            android:src="@drawable/liucheng_icon_pre"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_76"
+            android:layout_marginRight="@dimen/dp_80"
+            android:layout_height="@dimen/dp_9"/>
+
+
+
+        <TextView
+            android:id="@+id/d_setp_2_tv"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/dp_17"
+            android:text="②续住办理"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/dx2_iv"
+            android:layout_width="@dimen/dp_19"
+            android:src="@drawable/liucheng_icon_pre"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_76"
+            android:layout_marginRight="@dimen/dp_80"
+            android:layout_height="@dimen/dp_9"/>
+
+        <TextView
+            android:id="@+id/d_setp_3_tv"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/dp_17"
+            android:text="③续住成功"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/book_zhu_layout"
+        android:layout_width="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:id="@+id/b_setp_1_tv"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/dp_17"
+            android:text="①订单查询"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/b_iv"
+            android:layout_width="@dimen/dp_19"
+            android:src="@drawable/liucheng_icon_pre"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_34"
+            android:layout_marginRight="@dimen/dp_36"
+            android:layout_height="@dimen/dp_9"/>
+
+
+
+        <TextView
+            android:id="@+id/b_setp_2_tv"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/dp_17"
+            android:text="②订单确认"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/bx2_iv"
+            android:layout_width="@dimen/dp_19"
+            android:src="@drawable/liucheng_icon_pre"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_34"
+            android:layout_marginRight="@dimen/dp_36"
+            android:layout_height="@dimen/dp_9"/>
+
+
+        <TextView
+            android:id="@+id/b_setp_3_tv"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/dp_17"
+            android:text="③登记入住"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/bx3_iv"
+            android:layout_width="@dimen/dp_19"
+            android:src="@drawable/liucheng_icon_pre"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_34"
+            android:layout_marginRight="@dimen/dp_36"
+            android:layout_height="@dimen/dp_9"/>
+
+        <TextView
+            android:id="@+id/b_setp_4_tv"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/dp_17"
+            android:text="⑤入住完成"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

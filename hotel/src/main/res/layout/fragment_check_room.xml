@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <TextView
+        android:id="@+id/tips_tv"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="#556A77"
+        android:layout_marginTop="@dimen/dp_65"
+        android:textSize="@dimen/dp_36"
+        android:text="请将身份证放置识别区域"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:src="@drawable/shengfenzhengquyu"
+        android:layout_marginLeft="@dimen/dp_25"
+        android:layout_marginRight="@dimen/dp_25"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dp_144"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="visible"
+        android:layout_height="@dimen/dp_364"/>
+
+
+
+    <FrameLayout
+        android:id="@+id/rec_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+    <TextView
+        android:id="@+id/state_tv"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        android:layout_marginLeft="@dimen/dp_27"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="wrap_content"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rec"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/image"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_62"
+            android:layout_height="wrap_content"/>
+
+
+
+    <Button
+        android:id="@+id/ruzhu_btn"
+        android:layout_width="@dimen/dp_160"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="@dimen/dp_150"
+        android:layout_height="@dimen/dp_50"/>
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+

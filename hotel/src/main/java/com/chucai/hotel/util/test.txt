@@ -1,0 +1,14 @@
+#第一个单击
+input tap 100 100
+#休眠100毫秒
+sleep 0.1
+#第二次单击
+input tab 200 300
+#模拟滑动
+input swipe 30 40  60 40
+#第三次单击
+input tab 200 300
+#输入文本
+input text 测试
+#输入按键
+input keyevet 4

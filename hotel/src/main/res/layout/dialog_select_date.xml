@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+     <com.chucai.hotel.ac.widget.newcal.CalendarList
+         android:id="@+id/cl"
+         android:layout_width="match_parent"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent"
+         android:layout_marginBottom="@dimen/dp_84"
+         app:layout_constraintLeft_toLeftOf="parent"
+         android:layout_height="match_parent" />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="@dimen/dp_84">
+
+        <TextView
+            android:id="@+id/day_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_84"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:textSize="@dimen/dp_18"
+            android:textColor="#131415"
+           />
+
+        <TextView
+            android:id="@+id/start_desc"
+            android:textColor="#556A77"
+            android:textSize="@dimen/dp_11"
+            android:text="入住"
+            android:layout_width="wrap_content"
+
+            android:gravity="center_vertical"
+
+            android:layout_height="@dimen/dp_84"/>
+
+
+        <TextView
+            android:id="@+id/zhusu_time"
+            android:layout_width="wrap_content"
+
+            android:layout_marginLeft="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingRight="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_6"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dp_27"
+            android:paddingBottom="@dimen/dp_6"
+
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/day_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_84"
+            android:gravity="center_vertical"
+
+            android:layout_marginLeft="@dimen/dp_10"
+            android:textSize="@dimen/dp_18"
+            android:textColor="#131415"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/end_desc"
+            android:textColor="#556A77"
+            android:textSize="@dimen/dp_11"
+            android:text="离开"
+            android:layout_width="wrap_content"
+
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="@dimen/dp_84"/>
+
+
+        <TextView
+            android:id="@+id/price"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="@dimen/dp_260"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:textColor="#EF7561"
+            android:gravity="center"
+            android:textSize="@dimen/dp_30"
+            android:layout_height="@dimen/dp_84"/>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/finish_btn"
+        android:layout_width="@dimen/dp_204"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:textSize="@dimen/sp_24"
+        android:textColor="@android:color/white"
+        android:text="完成"
+        android:layout_height="@dimen/dp_84"/>
+
+</android.support.constraint.ConstraintLayout>

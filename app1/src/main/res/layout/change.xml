@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="信息修改如下："
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/text01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="ID："
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/edit_query1"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/text01"
+        android:background="@drawable/shape"
+        android:padding="10dp"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/text02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text01"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:text="签名："
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/edit_query2"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_query1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/text02"
+        android:background="@drawable/shape"
+        android:padding="10dp"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/text03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text02"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:text="个人信息："
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/edit_query3"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_query2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/text03"
+        android:background="@drawable/shape"
+        android:padding="10dp"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/bt_tj"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/edit_query3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="提交"
+        android:textSize="30sp" />
+
+</RelativeLayout>
