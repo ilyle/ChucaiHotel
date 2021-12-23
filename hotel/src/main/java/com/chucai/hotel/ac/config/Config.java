@@ -8,9 +8,10 @@ public class Config {
 
     // 为了apiKey,secretKey为您调用百度人脸在线接口的，如注册，识别等。
     // 为了的安全，建议放在您的服务端，端把人脸传给服务器，在服务端端进行人脸注册、识别放在示例里面是为了您快速看到效果
-    public static String apiKey = "CLROzBlpTk6FDdoyWUIpWzPk";
-    public static String secretKey = "zybQiAI9KDkEfACi0Mpe3ja6FpLiDBBH";
-    public static String licenseID = "chucai-face-hotel-face-android";
+    public static String appId = "25402142";
+    public static String apiKey = "wPwGzi4WixnZs32DnWN3Nlqm";
+    public static String secretKey = "u6z7EQ6BxfnSF9DElEHVTbkEom2X6nYr";
+    public static String licenseID = "com-chucai-hotel-face-androi";
     public static String licenseFileName = "idl-license.face-android";
 
 

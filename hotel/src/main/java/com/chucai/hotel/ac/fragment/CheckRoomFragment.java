@@ -27,7 +27,6 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSON;
 import com.baidu.idl.face.platform.FaceStatusNewEnum;
 import com.baidu.idl.face.platform.model.ImageInfo;
-import com.baidu.idl.face.platform.ui.FaceDetectFragment;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.chucai.hotel.R;
@@ -142,7 +141,7 @@ public class CheckRoomFragment extends Fragment {
 //                new CPUThread().start();
                  mHandler.sendEmptyMessageDelayed(33,4000);
             }else if(msg.what==33){
-                recFragment.setTakePic();
+//                recFragment.setTakePic();
             }
 
 
@@ -333,7 +332,7 @@ public class CheckRoomFragment extends Fragment {
 
 
 
-    FaceDetectFragment recFragment = null;
+//    FaceDetectFragment recFragment = null;
     public void startRecFace() {
         mImage.setVisibility(View.VISIBLE);
         mTipsTv.setVisibility(View.GONE);
@@ -363,46 +362,46 @@ public class CheckRoomFragment extends Fragment {
 //
 //                }
 //            });
-        recFragment = new FaceDetectFragment(getActivity());
-        RelativeLayout.LayoutParams lps=new RelativeLayout.LayoutParams(-1,-1);
-         mRecFragemnt.addView(recFragment,lps);
-
-            recFragment.setRecListener(new FaceDetectFragment.RecListener() {
-                @Override
-                public void onDetectCompletion(FaceStatusNewEnum status, String message, HashMap<String, ImageInfo> base64ImageCropMap, HashMap<String, ImageInfo> base64ImageSrcMap) {
-                    Log.i(TAG, "onDetectCompletion: "+message);
-
-                    if (status == FaceStatusNewEnum.DetectRemindCodeTimeout) {
-//                        recFragment.reRec();
-//                        ToastUtil.showShort(getContext(),"识别超时，请重试");
-                        mImage.post(new Runnable() {
-                            @Override
-                            public void run() {
-                                stopRecFace();
-
-
-                            }
-                        });
-
-
-                    }
-                }
-            });
-        recFragment.setOnPhotoTakListener(new FaceDetectFragment.OnPhotoTakListener() {
-            @Override
-            public void onTakePic(Bitmap path) {
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        faceCompare(mHandler,path,curIdCardUser.getBitmap());
-                    }
-                }).start();
-
-
-
-
-            }
-        });
+//        recFragment = new FaceDetectFragment(getActivity());
+//        RelativeLayout.LayoutParams lps=new RelativeLayout.LayoutParams(-1,-1);
+//         mRecFragemnt.addView(recFragment,lps);
+//
+//            recFragment.setRecListener(new FaceDetectFragment.RecListener() {
+//                @Override
+//                public void onDetectCompletion(FaceStatusNewEnum status, String message, HashMap<String, ImageInfo> base64ImageCropMap, HashMap<String, ImageInfo> base64ImageSrcMap) {
+//                    Log.i(TAG, "onDetectCompletion: "+message);
+//
+//                    if (status == FaceStatusNewEnum.DetectRemindCodeTimeout) {
+////                        recFragment.reRec();
+////                        ToastUtil.showShort(getContext(),"识别超时，请重试");
+//                        mImage.post(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                stopRecFace();
+//
+//
+//                            }
+//                        });
+//
+//
+//                    }
+//                }
+//            });
+//        recFragment.setOnPhotoTakListener(new FaceDetectFragment.OnPhotoTakListener() {
+//            @Override
+//            public void onTakePic(Bitmap path) {
+//                new Thread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        faceCompare(mHandler,path,curIdCardUser.getBitmap());
+//                    }
+//                }).start();
+//
+//
+//
+//
+//            }
+//        });
         mHandler.sendEmptyMessageDelayed(33,4000);
     }
 

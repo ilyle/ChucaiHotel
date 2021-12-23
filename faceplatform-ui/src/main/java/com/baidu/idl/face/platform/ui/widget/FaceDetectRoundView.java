@@ -178,7 +178,7 @@ public class FaceDetectRoundView extends View {
                     (int) (y + hr));
         }
         mX = x;
-        mY = 450;
+        mY = y;
         mR = r;
     }
 
@@ -220,9 +220,6 @@ public class FaceDetectRoundView extends View {
                     0, mCircleLinePaint);
             canvas.rotate(6);
         }
-        Paint paint=new Paint();
-        paint.setColor(Color.RED);
-        canvas.drawRect(getFaceRoundRect(),paint);
         canvas.restore();
     }
 
@@ -237,8 +234,6 @@ public class FaceDetectRoundView extends View {
                     0, mCircleLineSelectPaint);
             canvas.rotate(6);
         }
-
-
         canvas.restore();
     }
 

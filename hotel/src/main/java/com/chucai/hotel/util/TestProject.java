@@ -1,11 +1,7 @@
 package com.chucai.hotel.util;
 
-import android.os.SystemClock;
 import android.text.TextUtils;
 import android.util.Log;
-
-import com.baidu.liantian.ac.F;
-import com.xtf.xtflib.util.FileUtil;
 
 import java.io.BufferedReader;
 import java.io.File;
