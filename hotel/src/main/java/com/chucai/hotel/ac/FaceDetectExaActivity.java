@@ -12,6 +12,7 @@ import com.baidu.aip.face.MatchRequest;
 import com.baidu.idl.face.platform.FaceStatusNewEnum;
 import com.baidu.idl.face.platform.model.ImageInfo;
 import com.baidu.idl.face.platform.ui.FaceDetectActivity;
+import com.baidu.idl.face.platform.ui.FaceLivenessActivity;
 import com.chucai.hotel.ac.config.Config;
 import com.chucai.hotel.bean.baidu.BaiduResponse;
 import com.chucai.hotel.bean.baidu.FaceCompare;
@@ -39,7 +40,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
-public class FaceDetectExaActivity extends FaceDetectActivity {
+public class FaceDetectExaActivity extends FaceLivenessActivity {
     private static final String TAG = "FaceDetectExaActivity";
 
     private Context mContext;
@@ -51,10 +52,10 @@ public class FaceDetectExaActivity extends FaceDetectActivity {
     }
 
     @Override
-    public void onDetectCompletion(FaceStatusNewEnum status, String message,
-                                   HashMap<String, ImageInfo> base64ImageCropMap,
-                                   HashMap<String, ImageInfo> base64ImageSrcMap) {
-        super.onDetectCompletion(status, message, base64ImageCropMap, base64ImageSrcMap);
+    public void onLivenessCompletion(FaceStatusNewEnum status, String message,
+                                     HashMap<String, ImageInfo> base64ImageCropMap,
+                                     HashMap<String, ImageInfo> base64ImageSrcMap, int currentLivenessCount) {
+        super.onLivenessCompletion(status, message, base64ImageCropMap, base64ImageSrcMap, currentLivenessCount);
         if (status == FaceStatusNewEnum.OK && mIsCompletion) {
             // 获取最优图片
             getBestImage(base64ImageCropMap, base64ImageSrcMap);

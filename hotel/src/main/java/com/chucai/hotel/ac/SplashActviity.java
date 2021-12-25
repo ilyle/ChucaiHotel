@@ -14,7 +14,10 @@ import android.util.Log;
 import android.view.View;
 
 import com.alibaba.fastjson.JSON;
+import com.baidu.idl.face.platform.FaceConfig;
+import com.baidu.idl.face.platform.FaceEnvironment;
 import com.baidu.idl.face.platform.FaceSDKManager;
+import com.baidu.idl.face.platform.LivenessTypeEnum;
 import com.baidu.idl.face.platform.listener.IInitCallback;
 import com.chucai.hotel.R;
 import com.chucai.hotel.bean.HotelData;
@@ -32,6 +35,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -138,6 +142,61 @@ public class SplashActviity extends AppCompatActivity {
         }
     }
 
+    /**
+     * 参数配置方法
+     */
+    private static boolean setFaceConfig() {
+        FaceConfig config = FaceSDKManager.getInstance().getFaceConfig();
+        // SDK初始化已经设置完默认参数（推荐参数），也可以根据实际需求进行数值调整
+
+        // 设置活体动作，通过设置list，LivenessTypeEunm.Eye, LivenessTypeEunm.Mouth,
+        // LivenessTypeEunm.HeadUp, LivenessTypeEunm.HeadDown, LivenessTypeEunm.HeadLeft,
+        // LivenessTypeEunm.HeadRight
+
+        List<LivenessTypeEnum> list = new ArrayList<>();
+        list.add(LivenessTypeEnum.Eye);
+        list.add(LivenessTypeEnum.Mouth);
+        config.setLivenessTypeList(list);
+        // 原图缩放系数
+        config.setScale(FaceEnvironment.VALUE_SCALE);
+        // 抠图宽高的设定，为了保证好的抠图效果，建议高宽比是4：3
+        config.setCropHeight(FaceEnvironment.VALUE_CROP_HEIGHT);
+        config.setCropWidth(FaceEnvironment.VALUE_CROP_WIDTH);
+        // 抠图人脸框与背景比例
+        config.setEnlargeRatio(FaceEnvironment.VALUE_CROP_ENLARGERATIO);
+        // 加密类型，0：Base64加密，上传时image_sec传false；1：百度加密文件加密，上传时image_sec传true
+        config.setSecType(FaceEnvironment.VALUE_SEC_TYPE);
+        // 检测超时设置
+        config.setTimeDetectModule(FaceEnvironment.TIME_DETECT_MODULE);
+        // 检测框远近比率
+        config.setFaceFarRatio(FaceEnvironment.VALUE_FAR_RATIO);
+        config.setFaceClosedRatio(FaceEnvironment.VALUE_CLOSED_RATIO);
+        FaceSDKManager.getInstance().setFaceConfig(config);
+        return true;
+    }
+
+
+    /**
+     * 初始化人脸识别
+     */
+    private static void initFace(Context context) {
+
+        setFaceConfig();
+
+        FaceSDKManager.getInstance().initialize(context, "com-chucai-hotel-face-android",
+                "idl-license.face-android", new IInitCallback() {
+                    @Override
+                    public void initSuccess() {
+                        Log.i(TAG, "初始化成功");
+                    }
+
+                    @Override
+                    public void initFailure(final int errCode, final String errMsg) {
+                        Log.e(TAG, "初始化失败 = " + errCode + " " + errMsg);
+                    }
+                });
+    }
+
     public static boolean getRoomMessage(Context context) throws IOException, JSONException {
 
         JSONObject jsonObject = new JSONObject();
@@ -175,18 +234,8 @@ public class SplashActviity extends AppCompatActivity {
         // 房间售卖方式
         data = RequestUtil.requestHttps(RequestUtil.threeURL("/admin/Room/getConsumes"), "POST", RequestUtil.toKeyVal(jsonObject2));
         DeviceHelper.setsRoomSaleTypeDataList(JSON.parseObject(data, RoomSaleType.class).getData());
-        FaceSDKManager.getInstance().initialize(context.getApplicationContext(), "com-chucai-hotel-face-android",
-                "idl-license.face-android", new IInitCallback() {
-                    @Override
-                    public void initSuccess() {
-                        Log.e(TAG, "初始化成功");
-                    }
 
-                    @Override
-                    public void initFailure(final int errCode, final String errMsg) {
-                        Log.e(TAG, "初始化失败 = " + errCode + " " + errMsg);
-                    }
-                });
+        initFace(context);
 
         return true;
     }
